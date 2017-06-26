@@ -44,6 +44,18 @@ p{
     font-size: 1em;
     margin-bottom: 10px;
 }
+.links{
+    width: 100;
+    height: auto;
+    margin-bottom: 10px;
+}
+.links ul{
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
 p[data-js="support"]{
     font-size: .9em;
     color: #999;
