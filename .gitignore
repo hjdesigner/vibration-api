@@ -1,0 +1,20 @@
+# Ignorar arquivos específicos
+.DS_Store
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+dist
+build
+parts
+bin
+.notes
+.sass-cache
+node_modules
+npm-debug.log
+
+# Ignorar todos os diretorios e arquivos em um diretorio. ignore/*
+/nbproject/
+/ignore/
+/src/vendor/bower_components/
+/bower_components

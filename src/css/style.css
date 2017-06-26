@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:600,900');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 100%;
+    background-color: #f2f2f2;
+    color: #000;
+}
+.github {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.github svg {
+    width: 60px;
+    height: 60px;
+}
+.main{
+    width: 100%;
+    height: auto;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+h1{
+    margin-bottom: 3px;
+    margin-top: 3%;
+    font-weight: 900;
+    font-size: 2.3em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #22d6bb;
+}
+p{
+    font-weight: 600;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+p[data-js="support"]{
+    font-size: .9em;
+    color: #999;
+}
+.box-buttons{
+    width: 100%;
+    height: auto;
+}
+button{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #ff3860;
+    border: 0;
+    color: #FFF;
+    font-size: 1em;
+    box-shadow: 0px 7px 8px -5px #731225;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px){
+    h1{
+        margin-bottom: 20px;
+        margin-top: 3%;
+        font-size: 3.4em;   
+    }
+    p{
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width: 1024px){
+    .container{
+        width: 70%;
+    }
+    .box-buttons{
+        display: flex;
+        margin-top: 30px;
+    }
+    button{
+        width: 20%;
+        margin-right: 1%;
+    }
+    button:last-child{
+        margin-right: 0;
+    }
+}
