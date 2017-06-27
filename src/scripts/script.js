@@ -3,6 +3,7 @@ const btnGhostBusters = document.querySelector('button[data-js="ghostBusters"]')
 const btnMario = document.querySelector('button[data-js="mario"]');
 const btnPowerRangers = document.querySelector('button[data-js="powerRangers"]');
 const btnMortalKombat = document.querySelector('button[data-js="mortalKombat"]');
+const btnGameOfThrones = document.querySelector('button[data-js="gameOfThrones"]');
 const textSupport = document.querySelector('p[data-js="support"]');
 
 function musicSimpsons(){
@@ -66,6 +67,17 @@ function musicMortalKombat(){
     );
 }
 
+function musicGameOfThrones(){
+    navigator.vibrate([
+        950,50,530,80,
+        100,100,100,60,
+        930,50,530,80,
+        100,100,100,60,
+        980
+        ]
+    );
+}
+
 if('vibrate' in navigator){
     textSupport.innerHTML = 'You browser supports'
     btnSimpsons.addEventListener('click', musicSimpsons);
@@ -73,6 +85,7 @@ if('vibrate' in navigator){
     btnMario.addEventListener('click', musicMario);
     btnPowerRangers.addEventListener('click', musicPowerRangers);
     btnMortalKombat.addEventListener('click', musicMortalKombat);
+    btnGameOfThrones.addEventListener('click',musicGameOfThrones);
 }else{
     textSupport.innerHTML = 'You browser does not supports'
 }
