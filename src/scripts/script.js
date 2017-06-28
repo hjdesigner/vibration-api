@@ -3,7 +3,11 @@ const btnGhostBusters = document.querySelector('button[data-js="ghostBusters"]')
 const btnMario = document.querySelector('button[data-js="mario"]');
 const btnPowerRangers = document.querySelector('button[data-js="powerRangers"]');
 const btnMortalKombat = document.querySelector('button[data-js="mortalKombat"]');
+const btnJamesBond = document.querySelector('button[data-js="jamesbond"]');
+const btnStarWars = document.querySelector('button[data-js="starwars"]');
+const btnMorseCode = document.querySelector('button[data-js="morsecode"]');
 const textSupport = document.querySelector('p[data-js="support"]');
+
 
 function musicSimpsons(){
     //Simpsons
@@ -65,6 +69,34 @@ function musicMortalKombat(){
         100,800]
     );
 }
+function musicJamesBond(){
+    navigator.vibrate([
+        200,100,200,275,
+        425,100,200,100,
+        200,275,425,100,
+        75,25,75,125,75,
+        25,75,125,100,
+        100]
+    );
+}
+function musicStarWars(){
+    navigator.vibrate([
+        500,110,500,110,
+        450,110,200,110,
+        170,40,450,110,
+        200,110,170,40,
+        500]
+    );
+}
+function musicMorseCode(){
+    navigator.vibrate([
+        100,30,100,30,
+        100,200,200,30,
+        200,30,200,200,
+        100,30,100,30,
+        100]
+    );
+}
 
 if('vibrate' in navigator){
     textSupport.innerHTML = 'You browser supports'
@@ -73,6 +105,11 @@ if('vibrate' in navigator){
     btnMario.addEventListener('click', musicMario);
     btnPowerRangers.addEventListener('click', musicPowerRangers);
     btnMortalKombat.addEventListener('click', musicMortalKombat);
+    btnJamesBond.addEventListener('click', musicJamesBond);
+    btnStarWars.addEventListener('click', musicStarWars);
+    btnMorseCode.addEventListener('click', musicMorseCode);
+
+
 }else{
     textSupport.innerHTML = 'You browser does not supports'
 }
