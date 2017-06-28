@@ -66,6 +66,9 @@ function musicMortalKombat(){
     );
 }
 
+navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
+
 if('vibrate' in navigator){
     textSupport.innerHTML = 'You browser supports'
     btnSimpsons.addEventListener('click', musicSimpsons);
