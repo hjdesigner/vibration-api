@@ -2,7 +2,7 @@
 
 > I recreated stretches of songs using the api vibration
 
-> * Only works on chrome and firefox on mobile
+> * Only works on chrome and firefox on mobile android
 
 [Final Result](http://henriquemelanda.com.br/vibration-api)
 
