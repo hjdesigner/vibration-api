@@ -6,6 +6,7 @@ const btnMortalKombat = document.querySelector('button[data-js="mortalKombat"]')
 const btnJamesBond = document.querySelector('button[data-js="jamesbond"]');
 const btnStarWars = document.querySelector('button[data-js="starwars"]');
 const btnMorseCode = document.querySelector('button[data-js="morsecode"]');
+const btnGameOfThrones = document.querySelector('button[data-js="gameOfThrones"]');
 const textSupport = document.querySelector('p[data-js="support"]');
 
 
@@ -97,8 +98,19 @@ function musicMorseCode(){
         100]
     );
 }
+function musicGameOfThrones(){
+    navigator.vibrate([
+        950,50,530,80,
+        100,100,100,60,
+        930,50,530,80,
+        100,100,100,60,
+        980
+        ]
+    );
+}
 
 navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
 
 
 if('vibrate' in navigator){
@@ -111,8 +123,7 @@ if('vibrate' in navigator){
     btnJamesBond.addEventListener('click', musicJamesBond);
     btnStarWars.addEventListener('click', musicStarWars);
     btnMorseCode.addEventListener('click', musicMorseCode);
-
-
+    btnGameOfThrones.addEventListener('click',musicGameOfThrones);
 }else{
     textSupport.innerHTML = 'You browser does not supports'
 }
