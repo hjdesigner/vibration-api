@@ -1,99 +1,43 @@
-const buttons = document.querySelectorAll('button');
-const textSupport = document.querySelector('p[data-js="support"]');
+'use strict';
 
-const playlist = {
-  'simpsons': [
-    166,320,128,257,
-    103,249,71,145,
-    138,366,119,273,
-    120,248,79,121,
-    71,121,63,113,
-    63,129,263,665,
-    103,112,64,113,
-    63,105,63,129,
-    119,521,71,129,
-    63,120,56,149,
-    107],
+var _playlist = require('./playlist');
 
-  'ghostBusters': [
-    592,184,632,144,
-    584,169,534,282,
-    96,159,95,161,
-    104,24,88,40,
-    120,152,
-    592,184,632,144,
-    584,169,534,282,
-    96,159,95,161,
-    104,24,88,40,
-    120,152],
+var _playlist2 = _interopRequireDefault(_playlist);
 
-  'mario': [
-    87,89,104,176,
-    96,176,88,88,
-    79,241,176,377,
-    191],
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  'powerRangers': [
-    150,150,150,150,
-    75,75,150,150,150,
-    150,450],
-
-  'mortalKombat': [
-    100,200,100,200,
-    100,200,100,200,100,
-    100,100,100,100,
-    200,100,200,100,
-    200,100,200,100,
-    100,100,100,100,200,
-    100,200,100,200,
-    100,200,100,100,100,
-    100,100,100,100,100,
-    100,100,50,50,
-    100,800],
-
-    'jamesbond': [
-    200,100,200,275,
-    425,100,200,100,
-    200,275,425,100,
-    75,25,75,125,75,
-    25,75,125,100,
-    100],
-
-    'starwars': [
-    500,110,500,110,
-    450,110,200,110,
-    170,40,450,110,
-    200,110,170,40,
-    500],
-
-    'morsecode': [
-    100,30,100,30,
-    100,200,200,30,
-    200,30,200,200,
-    100,30,100,30,
-    100],
-
-    'gameOfThrones': [
-    950,50,530,80,
-    100,100,100,60,
-    930,50,530,80,
-    100,100,100,60,
-    980
-    ],
-    'survivor': [
-      700,150,150,150,150,150,150,1000,150,150,150,150,150,
-      700,150,150,150,150,150,0,2000
-    ]
-};
+var buttons = document.querySelectorAll('button');
+var textSupport = document.querySelector('p[data-js="support"]');
 
 if ('vibrate' in navigator) {
     textSupport.innerHTML = 'You browser supports';
 
-    for (button of buttons) {
-      button.addEventListener('click', (e) => {
-          console.log(playlist[e.target.dataset['js']]);
-        navigator.vibrate(playlist[e.target.dataset['js']]);
-      });
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            button = _step.value;
+
+            button.addEventListener('click', function (e) {
+                console.log(_playlist2.default[e.target.dataset['js']]);
+                navigator.vibrate(_playlist2.default[e.target.dataset['js']]);
+            });
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
     }
 } else {
     textSupport.innerHTML = 'You browser does not supports';

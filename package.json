@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "gulp server",
+    "dev": "babel --watch src/dev --out-dir src/scripts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.17.5",
-    "gulp": "^3.9.1"    
+    "gulp": "^3.9.1"
   }
 }
